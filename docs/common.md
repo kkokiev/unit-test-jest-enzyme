@@ -5,6 +5,7 @@
 - Самая большая сложность тестирования заключается в том, что необходимо писать легко тестируемый код.
 - Для создания тетста добавить it() или test() блок с именем теста и кодом.
 - Возможно опциональное обёртывание в describe() для логической группировки.
+- [Jest cheat sheet](https://devhints.io/jest)
 
 
 ## Javascript
@@ -65,41 +66,6 @@ it('renders without crashing', () => {
 
 Если нужны рендер тесты которые проверяют интеграцию компонетов, Enzyme поддерживает
 полный рендер с [mount()](http://airbnb.io/enzyme/docs/api/mount.html)
-
-### Снимки ака snapshots
-
-В первый раз, когда запускается тест, создаётся файл снимка. После этого можно посмотреть созданный файл, чтобы проверить, соответствует ли отрендеренный компонент ожидаемому результату. Snapshot, при необходимости можно перезаписать.
-
-`link.js`
-
-```jsx
-import React from 'react';
-import { string } from 'prop-types';
-const Link = ({ title, url }) => <a href={url}>{title}</a>;
-Link.propTypes = {
-  title: string.isRequired,
-  url: string.isRequired
-};
-export default Link;
-```
-
-`link.test.js`
-```js
-import React from 'react';
-import { shallow } from 'enzyme';
-import { shallowToJson } from 'enzyme-to-json';
-
-import Link from './link';
-
-describe('Link', () => {
-  it('should render correctly', () => {
-    const output = shallow(
-      <Link title="mockTitle" url="mockUrl" />
-    );
-    expect(shallowToJson(output)).toMatchSnapshot();
-  });
-});
-```
 
 ### Что еще тестировать?
 

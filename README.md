@@ -6,3 +6,5 @@
 
 ### [Общие сведения](docs/common.md)
 ### [Функции и Сервисы](docs/functions-services.md)
+### [Компоненты](docs/components.md)
+### [mapStateToProps и mapDispatchToProps](docs/mapStateToProps.md)

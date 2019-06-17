@@ -4,4 +4,5 @@
 
 ## Содержание
 
-### [Общие сведения](docs/common.md) 
+### [Общие сведения](docs/common.md)
+### [Функции и Сервисы](docs/functions-services.md)

@@ -8,3 +8,5 @@
 ### [Функции и Сервисы](docs/functions-services.md)
 ### [Компоненты](docs/components.md)
 ### [mapStateToProps и mapDispatchToProps](docs/mapStateToProps.md)
+### [Тонкости и хитрости](docs/niceties.md)
+### [React hooks](docs/hooks.md)
